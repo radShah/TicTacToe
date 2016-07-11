@@ -4,12 +4,16 @@ import com.tictactoe.Interface.Board;
 import com.tictactoe.Interface.Piece;
 import com.tictactoe.Interface.TicTacToe;
 
+
+
 public class TTTGame implements TicTacToe {
 	
 	Player playerX;
 	Player playerO;
+	
 	Board tttBoard;
 	int numTurnsLeft = 9;
+	boolean computerMode;
 	
 	public TTTGame() {
 		tttBoard = new TTTBoard();
@@ -20,6 +24,8 @@ public class TTTGame implements TicTacToe {
 	public Board getBoard() {
 		return tttBoard;
 	}
+	
+	
 
 	public boolean isValidMove(Board currentState, Board nextState) {
 		// TODO Auto-generated method stub
@@ -109,12 +115,12 @@ public class TTTGame implements TicTacToe {
 	}
 
 	public void initializePlayers() {
-		playerX = new Player();
-		playerO = new Player();
-		playerX.setName("Player X");
-		playerX.setPiece(Piece.X);
-		playerO.setName("Player 0");
-		playerO.setPiece(Piece.O);
+			playerX = new Player();
+			playerO = new Player();
+			playerX.setName("Player X");
+			playerX.setPiece(Piece.X);
+			playerO.setName("Player O");
+			playerO.setPiece(Piece.O);
 	}
 	
 	/* Board helper functions */
@@ -159,7 +165,7 @@ public class TTTGame implements TicTacToe {
 
 	public void startNewGame() {
 		tttBoard.clear();
-		numTurnsLeft=0;
+		numTurnsLeft=9;
 		
 	}
 }

@@ -28,6 +28,14 @@ public class TTTBoard implements Board {
 			Arrays.fill(row, Piece.OPEN);
 		}
 	}
+
+	public int getBoardHeight() {
+		return Board.height;
+	}
+	
+	public int getBoardWidth() {
+		return Board.width;
+	}
 	
 
 }

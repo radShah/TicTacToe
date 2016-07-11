@@ -5,6 +5,13 @@ package com.tictactoe.Interface;
  * An interface for a standard 3x3 tic-tac-toe board.
  */
 public interface Board {
+	
+	
+	int height = 3;
+	int width = 3;
+	
+	int getBoardHeight();
+	int getBoardWidth();
 
   /**
    * Get the {@link Piece} at the given position on the board.
